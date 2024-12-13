@@ -50,7 +50,7 @@ const Home = () => {
                 { isAdmin && <Button type="dashed" href="/addevent">
                     Add Event
                 </Button>}
-                <Button type="link" href="/getallevents">
+                <Button type="link" href="/api/event/">
                     See All Events
                 </Button>
             </Space>
