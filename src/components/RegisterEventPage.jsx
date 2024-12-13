@@ -10,7 +10,7 @@ const RegistrationPage = () => {
 
     useEffect(() => {
         if (eventId) {
-            fetch(`http://localhost:5000/api/event/${eventId}`)
+            fetch(`https://instruo-backend.onrender.com/api/event/${eventId}`)
                 .then((response) => response.json())
                 .then((data) => setEventDetails(data))
                 .catch((error) => console.error('Error fetching event details:', error));
@@ -41,7 +41,7 @@ const RegistrationPage = () => {
 
         console.log('Payload:', payload);
 
-        fetch('http://localhost:5000/api/registrations', {
+        fetch('https://instruo-backend.onrender.com/api/registrations', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),

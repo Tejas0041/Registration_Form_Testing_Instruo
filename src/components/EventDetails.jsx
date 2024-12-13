@@ -12,7 +12,7 @@ const EventDetailPage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/event/${eventId}`)
+        axios.get(`https://instruo-backend.onrender.com/api/event/${eventId}`)
             .then((res) => setEvent(res.data))
             .catch((err) => {
                 message.error('Failed to fetch event details');

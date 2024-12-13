@@ -10,12 +10,12 @@ const AllEvents = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/event')
+        fetch('https://instruo-backend.onrender.com/api/event')
             .then((res) => res.json())
             .then((data) => setEvents(data))
             .catch((err) => console.error('Error fetching events:', err));
 
-        fetch('http://localhost:5000/auth/status', {
+        fetch('https://instruo-backend.onrender.com/auth/status', {
             credentials: 'include',
         })
             .then((res) => res.json())

@@ -8,7 +8,7 @@ const Home = () => {
     const [isAdmin, setIsAdmin]= useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/auth/status', {
+        fetch('https://instruo-backend.onrender.com/auth/status', {
             credentials: 'include',
         })
             .then((res) => res.json())
@@ -39,11 +39,11 @@ const Home = () => {
             <Title level={2} style={{color: 'white'}}>Home</Title>
             <Space direction="vertical" size="large">
                 {!isLoggedIn ? (
-                    <Button type="primary" href="http://localhost:5000/auth/google">
+                    <Button type="primary" href="https://instruo-backend.onrender.com/auth/google">
                         Log In
                     </Button>
                 ) : (
-                    <Button type="default" href="http://localhost:5000/auth/logout">
+                    <Button type="default" href="https://instruo-backend.onrender.com/auth/logout">
                         Log Out
                     </Button>
                 )}
